@@ -1,0 +1,98 @@
+*{
+    /*mina element ska ha 0 margin och padding*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    /*jag vill att hela body ska ha en flex display och column direction, samt ha bakgrund på kroppen istället för en img tag så att hela kroppen har denna bakgrund*/
+    height: 100vh;
+    width: 100%;
+    background-image: url("pic/stacey-gabrielle-koenitz-rozells-kSY5T6js2KE-unsplash.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Roboto', sans-serif;
+}
+/*valde display flex eftersom jag tycker inte att en grid behövs för just denna projekt, jag vill att allt ska vara på varandra*/
+.card{
+    /*har display av flex och direction av column så att content ine i den är på varandra*/
+   width: 40rem;
+   height: 30rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border: 1px solid #222d;
+    margin-top: 7em;
+    backdrop-filter: blur(10px);
+    border-radius: 3rem;
+    position: relative;
+    bottom: 5rem;
+}
+#title{
+    margin-bottom: 10px;
+    font-size: 3rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+.search{
+    /*formen ska vara på vrandra och inte bredvid*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 3rem;
+}
+.search-bar{
+    height: 2rem;
+    width: 20rem;
+    border-radius: 3rem;
+    border: none;
+    padding: 10px;
+    font-weight: bold;
+    outline: none; 
+}
+button{
+    margin: 1.5em;
+    padding: 5px;
+    width: 7rem;
+    height: 2rem;
+    border-radius: 3rem;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 15px;
+}
+/*jag vill ha en mellanrum mellan texten och icon på min knapp*/
+button i{
+    margin-right: 5px;
+}
+button:hover{
+    transform: scaleY(1.1) scaleX(1.1) translateY(-0.3rem);
+    transition: 0.3s;
+}
+.weather{
+    margin: 1rem 6rem;
+    
+}
+.temp{
+    font-size: 30px;
+}
+.wind{
+    margin-bottom: 3rem;
+    /*vill ha beskrivning ska var gömd innan användaren söker efter en stad*/
+}.loading{
+    visibility: hidden;
+}
+@media (max-width: 670px) {
+    .card{
+        width: 20rem;
+    }
+    .search-bar{
+        width: 17rem;
+    }
+}
